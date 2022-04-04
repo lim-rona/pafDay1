@@ -1,0 +1,17 @@
+name: My first workflow
+
+#when this workflow is going to happen. on is an array the - signify its array. 
+on: 
+- push
+#or: on: ["push"]
+jobs:
+  #need to give it a name
+  my-first-workflow:
+    runs-on: ubuntu-latest #or container. Here, running on an ubuntu server
+    steps:  #steps is an array
+      - name: echo the date on Github #in command line u can do: echo "The current time/date is $(date)"
+        run: echo "The current time/date on Github is $(date)"
+
+
+#Is supposed to be spaces, not tab. yaml cannot understand the tab character so 
+#go back and change to spaces.
